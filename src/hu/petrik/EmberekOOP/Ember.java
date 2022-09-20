@@ -20,9 +20,7 @@ public class Ember {
 
     @Override
     public String toString() {
-        return "Név: " + name +
-                ", Születési dátum: " + birthDate +
-                ", Születési hely: " + birthPlace;
+        return "Név: " + name + ", Születési dátum: " + birthDate + ", Születési hely: " + birthPlace;
     }
 
     public int birthYear() {
@@ -45,7 +43,7 @@ public class Ember {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime birth = LocalDate.of(birthYear(), birthMonth(), birthDay()).atStartOfDay();
         Duration dur = Duration.between(now, birth);
-        age =(int) Math.abs(dur.toDays()/365);
+        age = (int) Math.abs(dur.toDays() / 365);
         return age;
     }
 }

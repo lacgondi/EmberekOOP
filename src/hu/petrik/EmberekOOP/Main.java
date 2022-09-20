@@ -1,5 +1,7 @@
 package hu.petrik.EmberekOOP;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Ember e1 = new Ember("Kiss Jóska", "2020.12.02", "Budapest");
@@ -13,5 +15,10 @@ public class Main {
         System.out.println(e3.birthMonth());
         System.out.println(e3.birthDay());
         System.out.println(e1.currentAge());
+
+        Scanner sc = new Scanner(System.in);
+
+        Emberek obj = new Emberek(new Ember[]{e1,e2,e3});
+        System.out.println(obj);
     }
 }
